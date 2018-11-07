@@ -41,7 +41,7 @@
   function getCanvas (width, height) {
     var
       canvas = Canvas ?
-        new Canvas() :
+        new Canvas.createCanvas() :
         document.createElement('canvas');
     if (width) canvas.width = width;
     if (height) canvas.height = height;

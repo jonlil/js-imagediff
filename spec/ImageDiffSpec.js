@@ -11,9 +11,11 @@ describe('ImageUtils', function() {
     TYPE_CANVAS       = isNode ? '[object Canvas]' : '[object HTMLCanvasElement]',
     E_TYPE            = { name : 'ImageTypeError', message : 'Submitted object was not an image.' };
 
-  function getContext () {
+  function getContext (width, height) {
+    width = width || 1;
+    height = height || 1;
     var
-      canvas = imagediff.createCanvas(),
+      canvas = imagediff.createCanvas(width, height),
       context = canvas.getContext('2d');
     return context;
   }
@@ -87,7 +89,7 @@ describe('ImageUtils', function() {
     describe('Checking', function () {
       var
         image = newImage(),
-        canvas = imagediff.createCanvas(),
+        canvas = imagediff.createCanvas(30, 30),
         context = canvas.getContext('2d'),
         imageData = context.createImageData(30, 30);
 
@@ -173,7 +175,7 @@ describe('ImageUtils', function() {
 
       it('should convert Context to ImageData', function () {
         var
-          canvas = imagediff.createCanvas(),
+          canvas = imagediff.createCanvas(1, 1),
           context = canvas.getContext('2d'),
           result = imagediff.toImageData(context);
         expect(result).toBeImageData();
@@ -480,8 +482,8 @@ describe('ImageUtils', function() {
       this.addMatchers(imagediff.jasmine)
     });
 
-    afterEach(function () {
-      require('fs').unlink(output);
+    afterEach(function (done) {
+      require('fs').unlink(output, done);
     });
 
     it('saves an image as a PNG', function () {
