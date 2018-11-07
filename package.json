@@ -20,11 +20,11 @@
     "canvas": "~2.0.1"
   },
   "devDependencies": {
-    "jasmine-node": "^1.16.2",
+    "jasmine-node": "^1.16.2"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hemnet/js-imagediff.git"
+    "url": "git+https://github.com/jonlil/js-imagediff.git"
   },
   "version": "2.0.0",
   "engines": {
