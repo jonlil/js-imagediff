@@ -23,17 +23,9 @@ API
 NodeJS
 ------
 
-js-imagediff is available through the npm.  It uses [node-canvas](https://github.com/LearnBoost/node-canvas) which requires lib cairo to be installed.
+js-imagediff is available through the npm.  It uses [node-canvas](https://github.com/Automattic/node-canvas) which requires lib cairo to be installed.
 Install js-imagediff with `npm install -g imagediff`.
 
-### Command Line
-
-* `imagediff [-e|equal] [-t|tolerance VALUE] FILE_A FILE_B` tests equality of two image files with an optional tolerance, printing 'true' or 'false'.
-* `imagediff [-d|diff] FILE_A FILE_B OUTPUT_FILE` renders an imagediff between two files, saving as the output file.
-
-### Cannot find module 'canvas'
-
-Canvas has been moved to an optional dependency for better browser and browserify support.  If you see a message that the module cannot be found, please check `npm install` first, incase there was indeed an issue installing it.  This relates to  https://github.com/HumbleSoftware/js-imagediff/issues/22.  Please let me know if you have any issues on account of this, or know of a better work around.
 
 Unit Testing Canvas
 -------------------
@@ -53,26 +45,13 @@ To use matchers:
   });
 ```
 
-Demo
-----
-
-* A demo is available at http://humblesoftware.github.com/js-imagediff/
-* A Jasmine test demo is available at http://humblesoftware.github.com/js-imagediff/test.html
-
-Users
------
-
-* [Flotr2](http://humblesoftware.com/flotr2/) - unit testing
-* [Envision.js](https://github.com/HumbleSoftware/envisionjs) - unit testing
-* [CSS Critic](https://github.com/cburgmer/csscritic) - A CSS regrestion testing framework
-* [HUSL - Human-friendly HSL](http://boronine.com/husl/) - used for regression testing before release.
-* [SUCCSS](https://github.com/B2F/Succss) - CSS regression testing.
-* [Origami.js](https://github.com/raphamorim/origami.js) - A canvas library 
-
-If you are using js-imagediff pelase drop us a line and let us know what you are doing with it.
-
 Changelog
 ---------
+<h3>2.0.0</h3>
+* NodeJS 10.13.0 support
+* Canvas 2.0.x support
+* Drop browser support
+
 <h3>1.0.8</h3>
 * Update canvas dependency.
 * Expose internal Canvas.

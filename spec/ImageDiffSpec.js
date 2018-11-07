@@ -2,7 +2,7 @@ var
   //TODO can roll isNode up into a function if checks get longer
   isNode    = typeof module !== 'undefined',
   Canvas    = isNode && require('canvas'),
-  imagediff = imagediff || require('../js/imagediff.js');
+  imagediff = imagediff || require('../imagediff.js');
 
 describe('ImageUtils', function() {
 

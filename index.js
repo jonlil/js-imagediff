@@ -339,7 +339,7 @@
     callback = callback || Function;
 
     base64Data = canvas.toDataURL().replace(/^data:image\/\w+;base64,/,"");
-    decodedImage = new Buffer(base64Data, 'base64');
+    decodedImage = new Buffer.from(base64Data, 'base64');
     require('fs').writeFile(outputFile, decodedImage, callback);
   }
 

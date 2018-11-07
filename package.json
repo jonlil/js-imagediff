@@ -1,9 +1,6 @@
 {
   "name": "imagediff",
-  "main": "./imagediff.js",
-  "browser": {
-    "canvas": "./browser/canvas.js"
-  },
+  "main": "index.js",
   "description": "JavaScript Canvas based imagediff utility.",
   "homepage": "http://HumbleSoftware.github.com/js-imagediff/",
   "keywords": [
@@ -24,17 +21,13 @@
   },
   "devDependencies": {
     "jasmine-node": "^1.16.2",
-    "smoosh": ">=0.3.1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/HumbleSoftware/js-imagediff.git"
+    "url": "git://github.com/hemnet/js-imagediff.git"
   },
-  "version": "1.0.8",
+  "version": "2.0.0",
   "engines": {
-    "node": ">= 0.6.0"
-  },
-  "bin": {
-    "imagediff": "./bin/imagediff"
+    "node": ">= 10.13.0"
   }
 }

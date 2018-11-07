@@ -1,10 +1,4 @@
-default: test test-node imagediff
-
-imagediff:
-	smoosh make/build.json
+default: test
 
 test:
-	cd spec; jasmine-headless-webkit js -j jasmine.yml -c
-
-test-node:
 	cd spec; ../node_modules/.bin/jasmine-node .
