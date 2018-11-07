@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jonlil/js-imagediff.git"
+    "url": "git+https://github.com/hemnet/js-imagediff.git"
   },
   "version": "2.0.0",
   "engines": {
